@@ -25,6 +25,7 @@ function post (){
             const XHR = new XMLHttpRequest();
             
             XHR.open("POST","posts123", true);
+           XHR.setRequestHeader('X-CSRF-Token', csrfToken);
 
             XHR.responseType = "json";
             XHR.send(formData)
